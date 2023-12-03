@@ -1,10 +1,30 @@
 .btn{
     text-decoration: none;
     color: inherit;
+
+
+    &--ab{
+        font-size: $default-font-size;
+        padding: 1rem 2rem;
+        background-color: $col-white-1;
+        color: $col-main-blue-2;
+        margin: 3rem;
+        border-radius: 1rem;
+        transition: scale .2s ease-in-out;
+
+        &:hover{
+            scale: 1.1;
+        }
+    }
 }
 .nav-btn{
-    font-size: $default-font-size;
+    font-size: 1.7rem;
     font-weight: 500;
+    transition: color .2s ease-in-out;
+
+    &:hover{
+        color: $col-main-blue-2;
+    }
 
     &:last-child{
         padding: 0 2rem;

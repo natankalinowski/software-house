@@ -1,0 +1,29 @@
+.short-desc{
+    width: 100%;
+    padding: 10rem 20rem;
+
+    &__desc{
+        display: flex;
+        justify-content: space-between;
+      
+        &--text{
+            width: 45%;
+        }
+        &--img{
+            width: 45%;
+            
+            position: relative;
+            .desc-img{
+                width: 100%;
+                box-shadow: 0px 3px 10px rgba($col-gray-1,.5);
+                border-radius: 2rem;
+                overflow: hidden;
+            }
+        }
+
+    }
+ 
+    .desc-img{
+        width: 50rem;
+    }
+}

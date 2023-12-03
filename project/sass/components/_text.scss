@@ -1,0 +1,23 @@
+.txt{
+    &--h1{
+        font-size: 4rem;
+        &--desc{
+            font-size: 3rem;
+            font-weight: 500;
+        }
+    }
+    &--h2{
+        font-size: 3rem;
+
+        &--desc{
+            font-size: 1.7rem;
+            font-weight: 300;
+            padding: 1rem 0;
+            color: $col-gray-2;
+        }
+    }
+    &--h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+}

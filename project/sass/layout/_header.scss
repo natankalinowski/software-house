@@ -1,0 +1,22 @@
+.header{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 5rem 10rem;
+ 
+
+   &__about{
+        width: 80vw;
+        min-height: 50vh;
+        overflow: hidden;
+        border-radius: 2rem;
+        background-image: linear-gradient(to bottom right,$col-main-blue,$col-main-lightblue,$col-main-blue);
+        display: flex;
+        padding: 10rem;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        color: $col-white-0;
+   }
+}

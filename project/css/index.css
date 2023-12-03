@@ -19,10 +19,23 @@ body {
 .btn {
   text-decoration: none;
   color: inherit; }
+  .btn--ab {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    background-color: #f8fafc;
+    color: #412fbf;
+    margin: 3rem;
+    border-radius: 1rem;
+    transition: scale .2s ease-in-out; }
+    .btn--ab:hover {
+      scale: 1.1; }
 
 .nav-btn {
-  font-size: 1.6rem;
-  font-weight: 500; }
+  font-size: 1.7rem;
+  font-weight: 500;
+  transition: color .2s ease-in-out; }
+  .nav-btn:hover {
+    color: #412fbf; }
   .nav-btn:last-child {
     padding: 0 2rem; }
   .nav-btn--more {
@@ -45,6 +58,24 @@ body {
   transition: scale .2s ease-in-out; }
   .btn-acc:hover {
     scale: 1.1; }
+
+.txt--h1 {
+  font-size: 4rem; }
+  .txt--h1--desc {
+    font-size: 3rem;
+    font-weight: 500; }
+
+.txt--h2 {
+  font-size: 3rem; }
+  .txt--h2--desc {
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding: 1rem 0;
+    color: #343a40; }
+
+.txt--h3 {
+  font-size: 2rem;
+  text-align: center; }
 
 .nav {
   width: 100%;
@@ -79,3 +110,41 @@ body {
     font-size: 1.6rem;
     gap: 3rem;
     align-items: center; }
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem 10rem; }
+  .header__about {
+    width: 80vw;
+    min-height: 50vh;
+    overflow: hidden;
+    border-radius: 2rem;
+    background-image: linear-gradient(to bottom right, #4834d4, #686de0, #4834d4);
+    display: flex;
+    padding: 10rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: #fafafa; }
+
+.short-desc {
+  width: 100%;
+  padding: 10rem 20rem; }
+  .short-desc__desc {
+    display: flex;
+    justify-content: space-between; }
+    .short-desc__desc--text {
+      width: 45%; }
+    .short-desc__desc--img {
+      width: 45%;
+      position: relative; }
+      .short-desc__desc--img .desc-img {
+        width: 100%;
+        box-shadow: 0px 3px 10px rgba(33, 37, 41, 0.5);
+        border-radius: 2rem;
+        overflow: hidden; }
+  .short-desc .desc-img {
+    width: 50rem; }

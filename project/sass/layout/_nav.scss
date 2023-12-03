@@ -40,5 +40,21 @@
         font-size: $default-font-size;
         gap: 3rem;
         align-items: center;
+
+
+        & > a:first-child{
+            position: relative;
+            &::before{
+                opacity: .8;
+                content: '';
+                left: 0;
+                transform: translateX(-3rem) translateY(0.2rem);
+                position: absolute;
+                width: 2.2rem;
+                height: 2.2rem;
+                background-image: url('../img/icon/login.png');
+                background-size: cover;
+            }
+        }
     }
 }

@@ -51,9 +51,22 @@
     font-weight: 400;
     box-shadow: 0px 5px 10px rgba($col-gray-1,.2);
     transition: scale .2s ease-in-out;
-
     &:hover{
         scale: 1.1;
     }
     
+}
+.btn--white{
+        font-size: $default-font-size;
+        padding: 1rem 2rem;
+        background-color: $col-white-1;
+        color: $col-main-blue-2;
+        margin-top: 2rem;
+        border-radius: 1rem;
+        transition: scale .2s ease-in-out;
+        display: inline-block;
+
+        &:hover{
+            scale: 1.1;
+        }
 }

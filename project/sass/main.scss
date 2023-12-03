@@ -1,4 +1,5 @@
 @import "base/varables";
+@import "base/universal";
 @import "base/base";
 
 @import "components/buttons";
@@ -7,5 +8,7 @@
 @import "layout/nav";
 @import "layout/header";
 @import "layout/short-desc";
+@import "layout/coop";
+@import "layout/tech";
 
 @import "pages/home";

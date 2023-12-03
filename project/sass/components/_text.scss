@@ -2,7 +2,7 @@
     &--h1{
         font-size: 4rem;
         &--desc{
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 500;
         }
     }
@@ -14,10 +14,32 @@
             font-weight: 300;
             padding: 1rem 0;
             color: $col-gray-2;
+            text-align: left;
         }
     }
     &--h3{
         font-size: 2rem;
         text-align: center;
     }
+}
+.text{
+    &__big{
+        font-size: 3.5rem;
+        font-weight: 500;
+        
+    }
+    &__big-mid{
+        font-size: 3rem;
+        font-weight: 500;
+        
+    }
+    &__mid{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    &__small{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
 }

@@ -1,11 +1,21 @@
 .short-desc{
     width: 100%;
-    padding: 10rem 20rem;
+    padding: 0rem 20rem;
 
     &__desc{
         display: flex;
         justify-content: space-between;
-      
+        flex-wrap: wrap;
+       &:last-child{
+             margin: 15rem 0;
+             justify-content: space-between;
+
+             & > .short-desc__desc--text{
+                order: 2;
+             }
+          
+       }
+
         &--text{
             width: 45%;
         }
@@ -15,7 +25,7 @@
             position: relative;
             .desc-img{
                 width: 100%;
-                box-shadow: 0px 3px 10px rgba($col-gray-1,.5);
+                box-shadow: 0px 0px 10px rgba($col-gray-1,.2);
                 border-radius: 2rem;
                 overflow: hidden;
             }

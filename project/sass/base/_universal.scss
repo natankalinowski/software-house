@@ -1,0 +1,19 @@
+.separator{
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    opacity: 50%;
+    background-image: linear-gradient(to right bottom,$col-gray-1,transparent);
+    height: 3px;
+    border: 0;
+
+}
+
+.tx-col-white{
+    color: $col-white-0;
+}
+
+.uni-marg-top-10rem{margin-top: 10rem;}
+.uni-marg-top-7rem{margin-top: 7rem;}
+.uni-marg-top-5rem{margin-top: 5rem;}
+.uni-marg-top-3rem{margin-top: 3rem;}

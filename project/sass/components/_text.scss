@@ -43,3 +43,16 @@
     }
 
 }
+.txt__footer{
+    
+    &--tit{
+        color: $col-white-0;
+        font-size: 2.7rem;
+    }
+    &--redirect{
+        color: $col-white-0;
+        opacity: .8;
+        font-size: 1.8rem;
+    }
+
+}

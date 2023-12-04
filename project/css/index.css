@@ -22,6 +22,21 @@
 .uni-marg-top-3rem {
   margin-top: 3rem; }
 
+.uni-marg-bot-10rem {
+  margin-bottom: 10rem; }
+
+.uni-marg-bot-7rem {
+  margin-bottom: 7rem; }
+
+.uni-marg-bot-5rem {
+  margin-bottom: 5rem; }
+
+.uni-marg-bot-3rem {
+  margin-bottom: 3rem; }
+
+.uni-marg-bot-1rem {
+  margin-bottom: 1rem; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -130,6 +145,15 @@ body {
   font-size: 1.5rem;
   font-weight: 300; }
 
+.txt__footer--tit {
+  color: #fafafa;
+  font-size: 2.7rem; }
+
+.txt__footer--redirect {
+  color: #fafafa;
+  opacity: .8;
+  font-size: 1.8rem; }
+
 .nav {
   width: 100%;
   padding: 2rem 10rem;
@@ -138,7 +162,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
   .nav__comp {
     display: flex;
     justify-content: flex-start;
@@ -181,7 +208,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 5rem 10rem; }
+  padding: 7rem 10rem; }
   .header__about {
     width: 80vw;
     min-height: 60vh;
@@ -248,6 +275,28 @@ body {
     gap: 3rem; }
     .tech__icons--icon {
       box-sizing: content-box;
-      width: 7rem;
-      padding: 1rem 3.5rem;
-      box-shadow: 0px 2px 10px rgba(33, 37, 41, 0.1); }
+      width: 5.5rem;
+      padding: 1.5rem 4.5rem;
+      box-shadow: 0px 2px 10px rgba(33, 37, 41, 0.1);
+      transition: scale .2s ease-in-out, box-shadow .2s ease-in-out; }
+      .tech__icons--icon:hover {
+        scale: 1.1;
+        box-shadow: 0px 2px 20px rgba(33, 37, 41, 0.1); }
+
+.footer {
+  width: 100%;
+  padding: 10rem 10rem;
+  background-color: #4834d4;
+  box-shadow: 0px -1px 10px rgba(33, 37, 41, 0.1);
+  display: flex;
+  flex-wrap: wrap; }
+  .footer__box {
+    padding: 2rem 7rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; }
+    .footer__box > a {
+      margin: 0.7rem 0rem; }
+  .footer__logo-box {
+    min-width: 10rem; }

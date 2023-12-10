@@ -18,10 +18,25 @@
     }
 }
 .nav-btn{
+    
+
+
     font-size: 1.7rem;
     font-weight: 500;
     transition: color .2s ease-in-out;
+    position: relative;
 
+    &--roll::before{
+        content: '';
+        position: absolute;
+        z-index: 1000;
+        width: 140%;
+        height: 6rem;
+        opacity: 0;
+    }
+
+    &:first-child
+    
     &:hover{
         color: $col-main-blue-2;
     }
@@ -42,6 +57,16 @@
         }
     }
    
+    // &:first-child::before:hover ~ .submenu{
+    //     display: flex;
+    // }
+  
+    &--roll:hover > .submenu{
+        display: flex;
+        opacity: 1;
+    }
+    
+
 }
 .btn-acc{
     background-color: $col-main-blue;

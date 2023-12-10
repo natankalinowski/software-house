@@ -16,6 +16,12 @@
         & > a {
             margin: 0.7rem 0rem;            
         }
+        &--logo{
+            display: flex;
+            align-items: flex-start;
+            width: 20vw;
+            
+        }
     }
     &__logo-box{
         min-width: 10rem;

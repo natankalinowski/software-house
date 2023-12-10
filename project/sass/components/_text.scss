@@ -56,3 +56,14 @@
     }
 
 }
+.nav__txt{
+    &--big{
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+    &--small{
+        font-size: 1.4rem;
+        font-weight: 400;
+        opacity: .7;
+    }
+}

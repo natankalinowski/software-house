@@ -72,8 +72,16 @@ body {
 .nav-btn {
   font-size: 1.7rem;
   font-weight: 500;
-  transition: color .2s ease-in-out; }
-  .nav-btn:hover {
+  transition: color .2s ease-in-out;
+  position: relative; }
+  .nav-btn--roll::before {
+    content: '';
+    position: absolute;
+    z-index: 1000;
+    width: 140%;
+    height: 6rem;
+    opacity: 0; }
+  .nav-btn:first-child .nav-btn:hover {
     color: #412fbf; }
   .nav-btn:last-child {
     padding: 0 2rem; }
@@ -86,6 +94,9 @@ body {
       height: 2.2rem;
       background-image: url("../img/icon/arrow_drop_down.png");
       background-size: cover; }
+  .nav-btn--roll:hover > .submenu {
+    display: flex;
+    opacity: 1; }
 
 .btn-acc {
   background-color: #4834d4;
@@ -154,9 +165,18 @@ body {
   opacity: .8;
   font-size: 1.8rem; }
 
+.nav__txt--big {
+  font-size: 1.7rem;
+  font-weight: 500; }
+
+.nav__txt--small {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: .7; }
+
 .nav {
   width: 100%;
-  padding: 2rem 10rem;
+  padding: 2rem 10rem 2rem;
   background-color: #fafafa;
   box-shadow: 0px 3px 10px rgba(33, 37, 41, 0.05);
   display: flex;
@@ -180,9 +200,8 @@ body {
       height: 100%;
       object-fit: cover; }
   .nav__navigation {
-    padding: 0rem 5rem;
+    padding: 1rem 5rem;
     display: flex;
-    align-items: center;
     gap: 5rem; }
   .nav__account {
     padding: 0 2rem;
@@ -202,6 +221,39 @@ body {
         height: 2.2rem;
         background-image: url("../img/icon/login.png");
         background-size: cover; }
+
+.submenu {
+  display: none;
+  min-width: 40rem;
+  transform: translateX(-5rem);
+  margin-top: 3rem;
+  background-color: #fdfdfd;
+  box-shadow: 0px 2px 10px rgba(33, 37, 41, 0.1);
+  z-index: 999;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  padding: 2rem 6rem 3rem 6rem;
+  flex-direction: column;
+  border-radius: 1rem; }
+  .submenu__el {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem; }
+    .submenu__el:hover {
+      background-color: #e6eaec; }
+    .submenu__el--img {
+      width: 2.7rem;
+      height: 2.7rem; }
+    .submenu__el--text {
+      display: flex;
+      flex-direction: column; }
+
+.submenu:hover {
+  display: block; }
 
 .header {
   width: 100%;
@@ -298,5 +350,9 @@ body {
     flex-direction: column; }
     .footer__box > a {
       margin: 0.7rem 0rem; }
+    .footer__box--logo {
+      display: flex;
+      align-items: flex-start;
+      width: 20vw; }
   .footer__logo-box {
     min-width: 10rem; }

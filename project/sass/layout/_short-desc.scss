@@ -6,6 +6,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        align-items: center;
        &:last-child{
              margin: 15rem 0;
              justify-content: space-between;
@@ -29,7 +30,41 @@
                 border-radius: 2rem;
                 overflow: hidden;
             }
+
+            &__mark{
+                &--bef{
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 12rem;
+                        height: 12rem;
+                        background-image: linear-gradient(to bottom right,$col-main-blue,$col-main-blue-2);
+                        bottom: 0;
+                        left: 0;
+                        margin: -3rem;
+                        clip-path: polygon(44% 40%, 97% 17%, 64% 88%, 0% 71%, 0% 48%, 2% 33%);
+                    }
+                }
+                &--aft{
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 12rem;
+                        height: 12rem;
+                        background-image: linear-gradient(to bottom right,$col-main-blue,$col-main-blue-2);
+                        bottom: 0;
+                        right: 0;
+                        margin: -3rem;
+                        clip-path: polygon(44% 40%, 97% 17%, 64% 88%, 0% 71%, 0% 48%, 2% 33%);
+                    }
+                }
+
+            
+           
         }
+       
+        }
+
 
     }
  

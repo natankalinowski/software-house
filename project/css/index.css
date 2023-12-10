@@ -125,7 +125,8 @@ body {
   font-size: 4rem; }
   .txt--h1--desc {
     font-size: 3.5rem;
-    font-weight: 500; }
+    font-weight: 500;
+    color: #282828; }
 
 .txt--h2 {
   font-size: 3rem; }
@@ -133,7 +134,7 @@ body {
     font-size: 1.7rem;
     font-weight: 300;
     padding: 1rem 0;
-    color: #343a40;
+    color: #282828;
     text-align: left; }
 
 .txt--h3 {
@@ -265,8 +266,8 @@ body {
     width: 80vw;
     min-height: 60vh;
     overflow: hidden;
-    border-radius: 2rem;
-    background-image: linear-gradient(to bottom right, #4834d4, #686de0, #4834d4);
+    border-radius: 3rem;
+    background-image: linear-gradient(to bottom right, #4834d4, #412fbf, #4834d4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +280,8 @@ body {
   .short-desc__desc {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .short-desc__desc:last-child {
       margin: 15rem 0;
       justify-content: space-between; }
@@ -295,6 +297,26 @@ body {
         box-shadow: 0px 0px 10px rgba(33, 37, 41, 0.2);
         border-radius: 2rem;
         overflow: hidden; }
+      .short-desc__desc--img__mark--bef::before {
+        content: '';
+        position: absolute;
+        width: 12rem;
+        height: 12rem;
+        background-image: linear-gradient(to bottom right, #4834d4, #412fbf);
+        bottom: 0;
+        left: 0;
+        margin: -3rem;
+        clip-path: polygon(44% 40%, 97% 17%, 64% 88%, 0% 71%, 0% 48%, 2% 33%); }
+      .short-desc__desc--img__mark--aft::after {
+        content: '';
+        position: absolute;
+        width: 12rem;
+        height: 12rem;
+        background-image: linear-gradient(to bottom right, #4834d4, #412fbf);
+        bottom: 0;
+        right: 0;
+        margin: -3rem;
+        clip-path: polygon(44% 40%, 97% 17%, 64% 88%, 0% 71%, 0% 48%, 2% 33%); }
   .short-desc .desc-img {
     width: 50rem; }
 

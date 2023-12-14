@@ -1,36 +1,48 @@
 .footer{
     width: 100%;
-    padding: 10rem 10rem;
+    padding: 10rem 10rem 3rem 10rem;
     background-color: $col-main-blue;
     box-shadow: 0px -1px 10px rgba($col-gray-1,.1);
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
     @include RWD(tab-port){
-        padding: 10rem 2rem;
+        padding: 10rem 2rem 3rem 2rem;
     }
 
     &__box{
-        padding: 2rem 7rem;
+        padding: 2rem 5vw;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-
+        // background-color: red;
         & > a {
             margin: 0.7rem 0rem;            
         }
+        
         &--logo{
-            display: flex;
-            align-items: flex-start;
-            width: 20vw;
-            
+            @include RWD(tab-mid){
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                display: grid;
+                place-items: center;
+
+            }
+            padding:0 4rem;
         }
     }
     &__logo-box{
         min-width: 10rem;
+    
     }
     &__logo{
-        width: 25vw;
+        width: 20vw;
+        @include RWD(tab-mid){
+            width: 20vh;
+
+        }
     }
 }

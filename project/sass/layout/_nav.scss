@@ -52,6 +52,20 @@
         align-items: center;
 
 
+        & > .menu__box{
+            display: none;
+        }
+        @include RWD(phone){
+            & > .menu__box{
+                display: flex;
+            }
+
+            & > a{
+                display: none;
+            }
+        }
+
+
         & > a:first-child{
             position: relative;
             &::before{

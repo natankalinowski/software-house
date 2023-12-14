@@ -1,44 +1,73 @@
 .short-desc {
     width: 100%;
-    padding: 0rem 20rem;
+    padding: 0rem 10vw;
 
-    // @include RWD(small-desktop){
-    //     padding: 0rem 15rem;
-    // }
 
-    // @include RWD(tab-){
-    //     padding: 0rem 5rem;
-    // }
-    // @include RWD(tab-mid) {
-    //     padding: 0rem 5rem;
-    // }
+    @include RWD(tab-mid) {
+        padding: 0rem 5vw;
+    }
+
+    @include RWD(phone) {
+        padding: 0rem 1rem;
+    }
+
+
 
     &__box {
         display: flex;
         align-items: center;
         gap: 10vw;
         position: relative;
+        margin-top: 15rem;
 
-        @include RWD(tab-mid) {
-            justify-content: center;
+        @include RWD(tab-port) {
+            flex-direction: column;
+
+            &--text {
+                width: 100%;
+
+            }
+
+            &--img {
+                width: 100%;
+                position: relative;
+
+            }
         }
 
-        &:last-child {
-            gap: 10vw;
-            margin: 15rem 0;
-            justify-content: space-between;
-            justify-content: center;
-        }
+
 
         &--text {
             width: 50%;
+
         }
 
         &--img {
             width: 50%;
             position: relative;
         }
-        
+
+        @include RWD(tab-mid) {
+            justify-content: center;
+            padding: 0rem 5rem;
+        }
+
+        @include RWD(tab-port) {
+            flex-direction: column;
+
+            &--text {
+                width: 100%;
+            }
+
+            &--img {
+                width: 100%;
+                position: relative;
+                order: -1;
+            }
+
+
+        }
+
     }
 
     &__box-reversed {
@@ -48,25 +77,42 @@
         padding: 10rem 5rem;
         align-items: center;
 
-        &--text{
+
+        &--text {
             width: 50%;
 
         }
-        &--img-box{
+
+        &--img-box {
             width: 50%;
             position: relative;
 
-         & > .desc-img{
-            width: 100%;
-         }
         }
-     
+
+        @include RWD(tab-port) {
+            flex-direction: column;
+
+            &--text {
+                width: 100%;
+
+            }
+
+            &--img-box {
+                width: 100%;
+                position: relative;
+                order: -1;
+            }
+
+
+        }
+
     }
 
 }
+
 .desc-img {
-    min-width: 15rem;
-    max-width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
     border-radius: 2rem;
 }

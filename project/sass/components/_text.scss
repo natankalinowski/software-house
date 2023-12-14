@@ -10,7 +10,7 @@
     }
     &--h2{
         font-size: 3rem;
-
+        
         &--desc{
             font-size: 1.7rem;
             font-weight: 300;
@@ -18,12 +18,40 @@
             color: $col-gray-6;
             text-align: left;
             text-wrap: balance;
-
+            
         }
     }
     &--h3{
         font-size: 2rem;
         text-align: center;
+    }
+    @include RWD(phone){
+        &--h1{
+            font-size: 3rem;
+            &--desc{
+                font-size: 2.5rem;
+                font-weight: 500;
+                color: $col-gray-6;
+                text-wrap: balance;
+            }
+        }
+        &--h2{
+            font-size: 2.2rem;
+            
+            &--desc{
+                font-size: 1.5rem;
+                font-weight: 300;
+                padding: 1rem 0;
+                color: $col-gray-6;
+                text-align: left;
+                text-wrap: balance;
+                
+            }
+        }
+        &--h3{
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 }
 .text{
@@ -45,6 +73,26 @@
         font-size: 1.5rem;
         font-weight: 300;
     }
+    @include RWD(phone){
+        &__big{
+            font-size: 2.5rem;
+            font-weight: 500;
+            
+        }
+        &__big-mid{
+            font-size: 2rem;
+            font-weight: 500;
+            
+        }
+        &__mid{
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+        &__small{
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
 
 }
 .txt__footer{
@@ -64,19 +112,26 @@
             content: '';
             bottom: 0;
             left: 0;
-            background-color: $col-white-0;
             width: 100%;
-            scale: 0% 50%;
             height: 2px;
-            border-radius: 1rem;
+            background-color: $col-white-0;
+            scale: 0% 0%;
             transition: scale .2s ease-in-out;
         }
 
         &:hover{
             &::before{
-                scale: 100% 50%;
+                scale: 100% 100%;
 
             }
+        }
+    }
+    @include RWD(phone){
+        &--tit{
+            font-size: 2rem;
+        }
+        &--redirect{
+            font-size: 1.3rem;
         }
     }
 

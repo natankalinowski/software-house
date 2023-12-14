@@ -6,6 +6,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include RWD(tab-port){
+        padding: 10rem 2rem;
+    }
+
     &__box{
         padding: 2rem 7rem;
         display: flex;
@@ -26,5 +30,7 @@
     &__logo-box{
         min-width: 10rem;
     }
-
+    &__logo{
+        width: 25vw;
+    }
 }

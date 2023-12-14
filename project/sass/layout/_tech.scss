@@ -12,8 +12,9 @@
     &__icons{
         padding: rem 10rem;
         display: flex;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
         gap: 3rem;
+
 
         &--icon{
             box-sizing: content-box;

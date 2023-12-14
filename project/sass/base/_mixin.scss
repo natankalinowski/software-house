@@ -1,0 +1,25 @@
+
+@mixin RWD($brakpoint){
+ 
+    @if $brakpoint == mid-phone{
+        @media only screen and (max-width: 28.125em){@content}; // * 450px
+    }
+    @if $brakpoint == phone{
+        @media only screen and (max-width: 37.5em){@content}; // * 600px
+    }
+    @if $brakpoint == tab-port{
+        @media only screen and (max-width: 59.75em){@content}; // * 956px
+    }
+    @if $brakpoint == tab-mid{
+        @media only screen and (max-width: 66.875em){@content}; // * 1070px
+    }
+    @if $brakpoint == tab-land{
+        @media only screen and (max-width: 80.8em){@content}; // * 1300px
+    }
+    @if $brakpoint == small-desktop{
+        @media only screen and (min-width: 78.125em){@content}; // * 1250px
+    }
+    @if $brakpoint == big-desktop{
+        @media only screen and (min-width: 112.5em){@content}; // * 1800px
+    }
+}

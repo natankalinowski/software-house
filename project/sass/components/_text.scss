@@ -5,6 +5,7 @@
             font-size: 3.5rem;
             font-weight: 500;
             color: $col-gray-6;
+            text-wrap: balance;
         }
     }
     &--h2{
@@ -16,6 +17,8 @@
             padding: 1rem 0;
             color: $col-gray-6;
             text-align: left;
+            text-wrap: balance;
+
         }
     }
     &--h3{
@@ -54,6 +57,27 @@
         color: $col-white-0;
         opacity: .8;
         font-size: 1.8rem;
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            background-color: $col-white-0;
+            width: 100%;
+            scale: 0% 50%;
+            height: 2px;
+            border-radius: 1rem;
+            transition: scale .2s ease-in-out;
+        }
+
+        &:hover{
+            &::before{
+                scale: 100% 50%;
+
+            }
+        }
     }
 
 }
@@ -61,10 +85,13 @@
     &--big{
         font-size: 1.7rem;
         font-weight: 500;
+        color: $col-gray-6;
     }
     &--small{
         font-size: 1.4rem;
         font-weight: 400;
         opacity: .7;
+        color: $col-gray-6;
+
     }
 }

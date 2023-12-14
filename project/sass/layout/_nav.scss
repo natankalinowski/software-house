@@ -64,8 +64,6 @@
                 display: none;
             }
         }
-
-
         & > a:first-child{
             position: relative;
             &::before{
@@ -80,6 +78,8 @@
                 background-size: cover;
             }
         }
+
+
     }
 }
 .submenu{

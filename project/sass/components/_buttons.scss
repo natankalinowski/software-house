@@ -54,6 +54,9 @@
             position: absolute;
             width: 2.2rem;
             height: 2.2rem;
+            top: 0;
+            right: 0;
+            transform: translateX(2rem);
             background-image: url('../img/icon/arrow_drop_down.png');
             background-size: cover;
         }

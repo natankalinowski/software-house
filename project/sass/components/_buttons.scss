@@ -4,6 +4,9 @@
 
 
     &--ab {
+        @include RWD(phone){
+            font-size: 1.3rem;
+        }
         font-size: $default-font-size;
         padding: 1rem 2rem;
         background-color: $col-white-1;
@@ -15,6 +18,16 @@
         &:hover {
             scale: 1.1;
         }
+    }
+    &--mob-menu{
+       border-radius: 0.5rem;
+       position: relative;
+       width: 100%;
+       text-align: center;
+       background-color: rgba($col-white-0,.1);
+       box-shadow: 0px 3px 10px rgba($col-gray-1,.05);
+       padding: 1.5rem 0.5rem;
+
     }
 }
 

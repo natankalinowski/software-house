@@ -9,7 +9,10 @@
 
     @include RWD(phone) {
         padding: 0rem 1rem;
+   
+    
     }
+ 
 
 
 
@@ -19,7 +22,6 @@
         gap: 10vw;
         position: relative;
         margin-top: 15rem;
-
         @include RWD(tab-port) {
             flex-direction: column;
 
@@ -67,6 +69,9 @@
 
 
         }
+        @include RWD(phone){
+            padding: 0rem 2rem;
+        }
 
     }
 
@@ -104,6 +109,9 @@
             }
 
 
+        }
+        @include RWD(phone){
+            padding: 5rem 2rem;
         }
 
     }

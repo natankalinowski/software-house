@@ -2,7 +2,7 @@
     text-decoration: none;
     color: inherit;
 
-
+      
     &--ab {
         @include RWD(phone){
             font-size: 1.3rem;
@@ -24,10 +24,30 @@
        position: relative;
        width: 100%;
        text-align: center;
-       background-color: rgba($col-white-0,.1);
-       box-shadow: 0px 3px 10px rgba($col-gray-1,.05);
+       background-color: $col-white-4;
        padding: 1.5rem 0.5rem;
+       width: 100%;
+       box-shadow: 0px 2px 7px rgba($col-gray-1,.05);
+        
+        &__account{
+            background-color: $col-main-blue-2;
+            color: $col-white-0;
+        }
 
+       &__more{
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 2.5rem;
+            height: 2.5rem;
+            background-image: url('../img/icon/arrow_drop_down.png');
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) translateX(-1rem);
+        }
+    }
     }
 }
 

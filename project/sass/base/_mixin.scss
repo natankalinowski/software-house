@@ -13,6 +13,9 @@
     @if $brakpoint == tab-mid{
         @media only screen and (max-width: 66.875em){@content}; // * 1070px
     }
+    @if $brakpoint == tab-nav-break{
+        @media only screen and (max-width: 73.5em){@content}; // * 1176px
+    }
     @if $brakpoint == tab-land{
         @media only screen and (max-width: 80.8em){@content}; // * 1300px
     }

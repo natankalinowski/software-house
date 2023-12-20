@@ -10,11 +10,14 @@
 
 
     &__icons{
-        padding: rem 10rem;
+        padding: 0rem 10rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 3rem;
+        @include RWD(phone){
+            padding: 0rem 5rem;
+        }
 
 
         &--icon{

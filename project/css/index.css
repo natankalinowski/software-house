@@ -77,9 +77,24 @@ body {
     position: relative;
     width: 100%;
     text-align: center;
-    background-color: rgba(250, 250, 250, 0.1);
-    box-shadow: 0px 3px 10px rgba(33, 37, 41, 0.05);
-    padding: 1.5rem 0.5rem; }
+    background-color: #fafafaf8;
+    padding: 1.5rem 0.5rem;
+    width: 100%;
+    box-shadow: 0px 2px 7px rgba(33, 37, 41, 0.05); }
+    .btn--mob-menu__account {
+      background-color: #412fbf;
+      color: #fafafa; }
+    .btn--mob-menu__more {
+      position: relative; }
+      .btn--mob-menu__more::before {
+        position: absolute;
+        content: '';
+        width: 2.5rem;
+        height: 2.5rem;
+        background-image: url("../img/icon/arrow_drop_down.png");
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(-1rem); }
 
 .nav-btn {
   font-size: 1.7rem;
@@ -198,7 +213,9 @@ body {
 @media only screen and (max-width: 37.5em) {
   .text__big {
     font-size: 2.5rem;
-    font-weight: 500; }
+    font-weight: 500;
+    width: 100%;
+    padding: 0 5rem; }
   .text__big-mid {
     font-size: 2rem;
     font-weight: 500; }
@@ -268,7 +285,6 @@ body {
   .mobile__nav--box {
     background-color: #fafafa;
     width: 100%;
-    height: 100vh;
     padding: 5rem 2rem 2rem 2rem;
     display: flex;
     flex-direction: column;
@@ -276,19 +292,28 @@ body {
     justify-content: flex-start;
     gap: 2rem; }
     .mobile__nav--box__btn {
-      padding: 1rem 0rem;
-      min-width: 80%;
+      width: 50%;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       flex-direction: column;
       border-radius: 1rem;
       box-shadow: 0px 2px 7px rgba(33, 37, 41, 0.05); }
+      @media only screen and (max-width: 37.5em) {
+        .mobile__nav--box__btn {
+          width: 90%; } }
+      .mobile__nav--box__btn:last-child {
+        display: none; }
+        @media only screen and (max-width: 37.5em) {
+          .mobile__nav--box__btn:last-child {
+            display: flex; } }
       .mobile__nav--box__btn > input {
         visibility: hidden; }
       .mobile__nav--box__btn > input:checked ~ .mobile__nav--box__roll {
-        height: 100%;
-        padding: 2rem 3rem; }
+        max-height: 50vh;
+        padding: 3rem 3rem;
+        visibility: visible;
+        opacity: 1; }
     .mobile__nav--box__roll {
       border-radius: 1rem 2rem;
       color: #fafafa;
@@ -296,10 +321,19 @@ body {
       justify-content: flex-start;
       align-items: center;
       flex-direction: column;
-      height: 0px;
-      transition: height .2s ease-in-out, padding .5s ease;
-      width: 100%; }
-    .mobile__nav--box .btn--mob-menu > label {
+      gap: 2rem;
+      transition: padding ease-in-out .3s, max-height ease-in-out .3s, visibility ease-in-out .5s, opacity ease-in-out .3s;
+      width: 100%;
+      max-height: 0;
+      visibility: hidden;
+      opacity: 0; }
+      .mobile__nav--box__roll > a {
+        background-image: linear-gradient(to bottom right, #4834d4, #3a2aaa);
+        border-radius: 1rem;
+        width: 80%;
+        text-align: center;
+        padding: 1rem 0.5rem; }
+    .mobile__nav--box .btn--mob-menu__more > label {
       position: absolute;
       width: 100%;
       left: 0;
@@ -317,6 +351,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 100; }
+  @media only screen and (max-width: 80.8em) {
+    .nav {
+      padding: 2rem 5rem 2rem; } }
   @media only screen and (max-width: 59.75em) {
     .nav {
       padding: 2rem 5rem 2rem; } }
@@ -342,6 +379,9 @@ body {
     gap: 5rem; }
     @media only screen and (max-width: 80.8em) {
       .nav__navigation {
+        padding: 1rem 2rem; } }
+    @media only screen and (max-width: 73.5em) {
+      .nav__navigation {
         display: none; } }
   .nav__account {
     padding: 0 2rem;
@@ -349,13 +389,20 @@ body {
     font-size: 1.6rem;
     gap: 3rem;
     align-items: center; }
+    .nav__account--box {
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: center; }
+      @media only screen and (max-width: 37.5em) {
+        .nav__account--box {
+          display: none; } }
     .nav__account > .menu__box {
       display: none; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 73.5em) {
       .nav__account > .menu__box {
-        display: flex; }
-      .nav__account > a {
-        display: none; } }
+        display: flex; } }
     .nav__account > a:first-child {
       position: relative; }
       .nav__account > a:first-child::before {
@@ -476,11 +523,11 @@ body {
   align-items: flex-start;
   padding: 7rem 10rem; }
   .header__about {
-    width: 70vw;
+    width: 60vw;
     min-height: 60vh;
     overflow: hidden;
     border-radius: 3rem;
-    background-image: linear-gradient(to bottom right, #4834d4, #412fbf, #4834d4);
+    background-image: linear-gradient(to bottom right, rgba(72, 52, 212, 0.8), #412fbf, rgba(72, 52, 212, 0.8));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -534,6 +581,9 @@ body {
           width: 100%;
           position: relative;
           order: -1; } }
+    @media only screen and (max-width: 37.5em) {
+      .short-desc__box {
+        padding: 0rem 2rem; } }
   .short-desc__box-reversed {
     display: flex;
     flex-direction: row-reverse;
@@ -554,6 +604,9 @@ body {
           width: 100%;
           position: relative;
           order: -1; } }
+    @media only screen and (max-width: 37.5em) {
+      .short-desc__box-reversed {
+        padding: 5rem 2rem; } }
 
 .desc-img {
   width: 100%;
@@ -585,11 +638,14 @@ body {
   gap: 5rem;
   padding: 0rem 0rem 15rem 0rem; }
   .tech__icons {
-    padding: rem 10rem;
+    padding: 0rem 10rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .tech__icons {
+        padding: 0rem 5rem; } }
     .tech__icons--icon {
       box-sizing: content-box;
       width: 5.5rem;

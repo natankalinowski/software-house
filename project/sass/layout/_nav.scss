@@ -11,6 +11,9 @@
     top: 0;
     z-index: 100;
 
+    @include RWD(tab-land){
+            padding: 2rem 5rem 2rem;
+    }
     @include RWD(tab-port){
         padding: 2rem 5rem 2rem;
     }
@@ -39,8 +42,10 @@
         padding: 1rem 5rem;
         display: flex;
         gap: 5rem;
-
         @include RWD(tab-land){
+            padding: 1rem 2rem;
+        }
+        @include RWD(tab-nav-break){
             display: none;
         }
 
@@ -54,19 +59,28 @@
         gap: 3rem;
         align-items: center;
 
-      
+        &--box{
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            align-items: center;
+
+            @include RWD(phone){
+                display: none;
+            }
+
+        }
 
         & > .menu__box{
             display: none;
         }
-        @include RWD(phone){
+        @include RWD(tab-nav-break){
             & > .menu__box{
                 display: flex;
             }
 
-            & > a{
-                display: none;
-            }
+          
         }
         & > a:first-child{
             position: relative;
